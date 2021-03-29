@@ -4,7 +4,9 @@ public class MinimumSwap {
 
 	static int minimumSwaps(int[] arr) {
 		int count = 0;
+		int num = 0;
 		for (int i = 0; i < arr.length; i++) {
+			num++;
 			if (arr[i] == i+1)
 				continue;
 			int tmp = arr[i];
@@ -13,6 +15,7 @@ public class MinimumSwap {
 			count++;
 			i--;
 		}
+		System.out.println("The time complexity: "+num);
 		return count;
 	}
 	public static void main(String[] args) {
